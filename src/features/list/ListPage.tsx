@@ -67,24 +67,26 @@ export const ListPage: React.FC = () => {
 
         {!isLoading && !error && (
           <div className="table">
-            {header}
-            <VirtualList
-              items={rows}
-              itemHeight={56}
-              height={420}
-              renderRow={(item) => (
-                <div className="row">
-                  <div>{item.id}</div>
-                  <div>{item.name}</div>
-                  <div>{item.email}</div>
-                  <div>{item.city}</div>
-                  <div>${item.salary.toLocaleString()}</div>
-                  <div>
-                    <Link to={`/details/${item.id}`}>Open</Link>
+            <div className="table-inner">
+              {header}
+              <VirtualList
+                items={rows}
+                itemHeight={56}
+                height={420}
+                renderRow={(item) => (
+                  <div className="row">
+                    <div>{item.id}</div>
+                    <div>{item.name}</div>
+                    <div>{item.email}</div>
+                    <div>{item.city}</div>
+                    <div>${item.salary.toLocaleString()}</div>
+                    <div>
+                      <Link to={`/details/${item.id}`}>Open</Link>
+                    </div>
                   </div>
-                </div>
-              )}
-            />
+                )}
+              />
+            </div>
           </div>
         )}
       </section>
