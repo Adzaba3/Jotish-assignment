@@ -50,7 +50,7 @@ export const LoginPage: React.FC = () => {
           </label>
           {error && <div className="error">{error}</div>}
           <button type="submit" className="primary">
-            Se connecter
+            Login
           </button>
         </form>
       </div>
