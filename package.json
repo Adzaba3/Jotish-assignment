@@ -14,8 +14,8 @@
     "typescript": "^4.4.4"
   },
   "scripts": {
-    "start": "react-scripts start --openssl-legacy-provider",
-    "build": "react-scripts build --openssl-legacy-provider",
+    "start": "node api.js && react-scripts start --openssl-legacy-provider",
+    "build": "node api.js && react-scripts build --openssl-legacy-provider",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

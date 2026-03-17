@@ -55,7 +55,6 @@ export const useVirtual = ({
 
     return () => {
       node.removeEventListener('scroll', calculate)
-      window.removeEventListener('resize', calculate)
     }
   }, [containerRef, itemHeight, overscan, totalCount])
 
